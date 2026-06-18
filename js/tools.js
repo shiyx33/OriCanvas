@@ -105,6 +105,8 @@ function findSnapPoint(pt){
 
 // 取消全部选中
 function deselectAll(){cp.lines.forEach(l=>l.selected=false);}
+// 反选
+function invertSelection(){cp.lines.forEach(l=>l.selected=!l.selected);}
 
 // Ctrl+反选快照 — 记录当前选中集，拖拽中做反选切换
 function captureToggleSnapshot(e){return(e.ctrlKey||e.metaKey)?new Set(cp.lines.filter(l=>l.selected)):null;}
@@ -314,11 +316,13 @@ const RADIAL_MENU_TREE = [
   ]},
   // W  — 选择 ▸
   { key: 'group.select', action: null, children: [
-    { key: 'sel.point', action: 'selPoint' },
-    { key: 'sel.box',   action: 'selBox' },
-    { key: 'sel.lasso', action: 'selLasso' },
-    { key: 'sel.brush', action: 'selBrush' },
-    null, null, null, null,
+    { key: 'sel.point',  action: 'selPoint' },
+    { key: 'sel.box',    action: 'selBox' },
+    { key: 'sel.lasso',  action: 'selLasso' },
+    { key: 'sel.brush',  action: 'selBrush' },
+    { key: 'sel.clear',  action: 'selClear' },
+    { key: 'sel.invert', action: 'selInvert' },
+    null, null,
   ]},
   // NW —（空）
   { key: '', action: null, children: null },
@@ -424,6 +428,8 @@ function radialExecute(index) {
 
 function executeRadialAction(a) {
   if (a.startsWith('color')) { currentColor = a[5]; setTool('draw'); updateColorBarUI(); }
+  else if (a === 'selClear') { deselectAll(); render(); }
+  else if (a === 'selInvert') { invertSelection(); render(); }
   else if (a.startsWith('sel')) { setTool('select'); setSelectMode(a.slice(3).toLowerCase()); }
   else if (a.startsWith('draw')) { setTool('draw'); setDrawMode(a[4].toLowerCase() + a.slice(5)); }
   else if (a.startsWith('ers')) { setTool('erase'); setEraseMode(a.slice(3).toLowerCase()); }

@@ -26,7 +26,7 @@
   "group.stats": { "zh": "📊 统计", "en": "📊 Stats" },
   "group.lineType": { "zh": "🎨 线型", "en": "🎨 Line Type" },
 
-  "tool.drawLine": { "zh": "📏 折线", "en": "📏 Line" },
+  "tool.drawLine": { "zh": "📏 直线", "en": "📏 Line" },
   "tool.rabbitEar": { "zh": "🐰 兔耳折", "en": "🐰 Rabbit Ear" },
   "tool.flatFold": { "zh": "📐 平折线", "en": "📐 Flat Fold" },
   "tool.extension": { "zh": "↔ 延长线", "en": "↔ Extension" },
@@ -42,6 +42,8 @@
   "sel.box": { "zh": "⬜ 框选", "en": "⬜ Box" },
   "sel.lasso": { "zh": "〰 套索", "en": "〰 Lasso" },
   "sel.brush": { "zh": "🖌 画笔", "en": "🖌 Brush" },
+  "sel.clear": { "zh": "✕ 清空选择", "en": "✕ Deselect All" },
+  "sel.invert": { "zh": "⇄ 反选", "en": "⇄ Invert" },
 
   "ers.point": { "zh": "🖱 点擦", "en": "🖱 Point" },
   "ers.box": { "zh": "⬜ 框擦", "en": "⬜ Box" },
@@ -80,7 +82,7 @@
   "status.tool": { "zh": "工具", "en": "Tool" },
   "status.hint": { "zh": "提示", "en": "Hint" },
 
-  "toolName.draw": { "zh": "画折线", "en": "Draw Line" },
+  "toolName.draw": { "zh": "画直线", "en": "Draw Line" },
   "toolName.select": { "zh": "选择", "en": "Select" },
   "toolName.erase": { "zh": "橡皮擦", "en": "Eraser" },
   "toolName.pan": { "zh": "拖拽画布", "en": "Pan Canvas" },
@@ -105,13 +107,15 @@
   "hint.selBox": { "zh": "拖拽框选 | Shift+加选 | Ctrl+反选切换 | 点击空白取消全部", "en": "Drag box select | Shift+add | Ctrl+toggle | Click blank to clear" },
   "hint.selLasso": { "zh": "拖拽套索选择 | Shift+加选 | Ctrl+反选切换 | 点击空白取消全部", "en": "Drag lasso select | Shift+add | Ctrl+toggle | Click blank to clear" },
   "hint.selBrush": { "zh": "拖拽画笔扫过选中 | Shift+加选 | Ctrl+反选切换 | 点击空白取消全部", "en": "Drag brush to select | Shift+add | Ctrl+toggle | Click blank to clear" },
+  "hint.selClear": { "zh": "取消所有线段的选中状态", "en": "Deselect all lines" },
+  "hint.selInvert": { "zh": "反转所有线段的选中状态", "en": "Invert selection" },
 
   "hint.ersPoint": { "zh": "点击线段删除", "en": "Click line to erase" },
   "hint.ersBox": { "zh": "拖拽矩形框批量擦除", "en": "Drag box to batch erase" },
   "hint.ersLasso": { "zh": "拖拽套索批量擦除", "en": "Drag lasso to batch erase" },
   "hint.ersBrush": { "zh": "拖拽画笔预览后松手擦除", "en": "Drag brush preview, release to erase" },
 
-  "hint.drawLineTooltip": { "zh": "拖拽画一条折线，Shift 吸附 22.5°", "en": "Drag to draw a crease line, Shift snap 22.5°" },
+  "hint.drawLineTooltip": { "zh": "拖拽画一条直线，Shift 吸附 22.5°", "en": "Drag to draw a crease line, Shift snap 22.5°" },
   "hint.rabbitEarTooltip": { "zh": "依次点击三角形三个顶点，画出内心到三点的角平分线", "en": "Click 3 vertices of a triangle to draw incenter bisectors" },
   "hint.flatFoldTooltip": { "zh": "点击顶点 → 选择候选方向 → 点击目标线，添加使顶点可压平的折线", "en": "Click vertex → choose direction → click target to add flat-foldable crease" },
   "hint.extensionTooltip": { "zh": "点击一条线延长，再点另一条线作为目标，延长至交点", "en": "Click line to extend, then target line, extend to intersection" },
@@ -127,6 +131,13 @@
   "hint.zoomOutTooltip": { "zh": "缩小", "en": "Zoom Out" },
   "hint.zoomInTooltip": { "zh": "放大", "en": "Zoom In" },
   "hint.resetViewTooltip": { "zh": "重置视角", "en": "Reset View" },
+  "hint.toolbarMenuTooltip": { "zh": "自定义工具栏显示", "en": "Customize toolbar" },
+
+  "tbmenu.lineWidth": { "zh": "线宽", "en": "Line Width" },
+  "tbmenu.endpoint": { "zh": "端点", "en": "Endpoint" },
+  "tbmenu.grid": { "zh": "网格", "en": "Grid" },
+  "tbmenu.axes": { "zh": "坐标轴", "en": "Axes" },
+  "tbmenu.zoom": { "zh": "缩放", "en": "Zoom" },
 
   "wm.switchToView": { "zh": "切换至阅览模式", "en": "Switch to View Mode" },
   "wm.switchToEdit": { "zh": "切换至绘图模式", "en": "Switch to Edit Mode" },
