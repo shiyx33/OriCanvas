@@ -475,6 +475,11 @@ function setTool(tool){
   document.getElementById('statusTool').textContent=t('status.tool')+'：'+(getToolName(tool)||tool);
   document.getElementById('statusHint').textContent=t('status.hint')+'：'+(tool==='select'?selectModeHint():tool==='erase'?eraseModeHint():tool==='draw'?drawModeHint():getToolHint(tool)||'');
   canvas.style.cursor=TOOL_CURSOR[tool]||'crosshair';
+  // 变换工具高亮
+  if(tool==='move'||tool==='copy'||tool==='mirror'){
+    document.querySelectorAll('.tool-group[data-group="transform"] .tool-group__body button').forEach(b=>b.classList.remove('selected'));
+    document.getElementById('btn'+tool.charAt(0).toUpperCase()+tool.slice(1))?.classList.add('selected');
+  }
 }
 
 // 设置绘制子模式（折线/兔耳折/平折线/延长线/垂线/角平分线/平行线）
